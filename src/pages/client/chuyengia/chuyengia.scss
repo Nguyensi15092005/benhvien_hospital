@@ -1,0 +1,58 @@
+.chuyengia{
+  margin-top: 85px;
+  &__image-page{
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius: 10px;
+  }
+  &__title{
+    text-align: center;
+    color: rgb(50, 65, 221);
+    font-size: 30px;
+    text-transform: uppercase;
+    margin: 15px 0;
+    font-weight: 600;
+  }
+  &__not{
+    text-align: center;
+    width: 100%;
+    height: 20px;
+    margin-bottom: 22px;
+    span{
+      width: 80px;
+      display: inline-block;
+      height: 3px;
+      background-color: #ddd;
+      border: 3px solid #b8b6b6;
+    }
+  }
+
+  &__box{
+    background-color: hsla(204, 71%, 80%, 0.859);
+    box-shadow: 0 0 6px rgba(105, 105, 105, 0.7);
+    padding: 30px 10px;
+    border-radius: 8px;
+    height: 286px;
+    &--image{
+      display: flex;
+      justify-content: center;
+      img{
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: contain;
+      }
+
+    }
+    h2{
+      text-align: center;
+      color: #0b0b5f;
+    }
+  }
+  &__pagi{
+    margin: 20px;
+    ul li{
+      font-size: 18px;
+    }
+  }
+}

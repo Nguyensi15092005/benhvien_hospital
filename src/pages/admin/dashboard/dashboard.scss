@@ -1,0 +1,83 @@
+.dashboard{
+    &__item{
+        background: #fff;
+        padding: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 3px #ddd;
+        border-radius: 5px;
+        
+        &--count{
+            h2{
+                text-align: center;
+                font-size: 28px;
+                margin: 7px 0;
+                
+            }
+            h3{
+                font-size: 21px;
+                font-weight: 600;
+                margin: 7px 0;
+                text-align: center;
+                color: #0a0f56;
+            }
+        }
+        &--count-bacsi{
+            h2{
+                color: #1275e5;
+            }
+        }
+        &--count-lichkham{
+            h2{
+                color: rgb(236, 53, 53);
+            }
+        }
+        &--count-khoa{
+            h2{
+                color: #1caa34;
+            }
+        }
+
+
+    }
+    &__icon{
+        font-size: 70px;
+        margin-right: 10px;
+        &--bacsi{
+            color: #1275e5;
+        }
+        &--lichkham{
+            color: rgb(236, 53, 53);
+        }
+        &--khoa{
+            color: #1caa34;
+        }
+    }
+
+    &__cardBieudo{
+        margin-top: 20px;
+        box-shadow: 0 0 3px #ddd;
+    }
+    &__bieudo{
+        height: 380px;
+        ul li{
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+        }
+        .time{
+            font-size: 18px;
+            margin-right: 20px;
+        }
+        .name{
+            font-size: 18px;
+        }
+    }
+    
+
+
+    &__gannhat{
+        margin-top: 20px;
+    }
+}

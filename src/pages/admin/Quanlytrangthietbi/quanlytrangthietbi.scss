@@ -1,0 +1,45 @@
+.thietbi{
+  &__alert{
+    text-align: center;
+    text-transform: uppercase;
+    padding: 20px; 
+    margin: 10px 0;
+    font-size: 25px;
+    font-weight: 600;
+    color: #0d2d52;
+  }
+  &__button-create{
+    padding: 5px 20px;
+    font-weight: 500;
+
+  }
+  &__title-create{
+    text-align: center;
+    color: #0d2d52;
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 5px;
+    text-transform: uppercase;
+  }
+  &__status{
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    width: 30px;
+    cursor: pointer;
+  }
+  &__action{
+    font-size: 22px;
+    width: 50px;
+    padding: 8px;
+    margin-right: 7px;
+  }
+  &__action:hover{
+    background-color: #ddd;
+  }
+  &__search{
+    background-color: #fff;
+  }
+}

@@ -1,0 +1,67 @@
+.tintuc{
+  margin-top: 85px;
+  &__image-page{
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius: 10px;
+  }
+  &__title{
+    text-align: center;
+    color: rgb(50, 65, 221);
+    font-size: 30px;
+    text-transform: uppercase;
+    margin: 15px 0;
+    font-weight: 600;
+  }
+  &__not{
+    text-align: center;
+    width: 100%;
+    height: 20px;
+    margin-bottom: 22px;
+    span{
+      width: 80px;
+      display: inline-block;
+      height: 3px;
+      background-color: #ddd;
+      border: 3px solid #b8b6b6;
+    }
+  }
+
+  &__box-item{
+    height: 330px;
+    overflow: hidden;
+    img{
+      width: 100%;
+    }
+    h2{
+      font-size: 17px;
+      margin-top: 2px;
+      color: #000;
+    }
+    .date{
+      display: flex;
+      align-items: center;
+      color: #05092d;
+    }
+    .icon{
+      font-size: 20px;
+      margin-right: 5px;
+    }
+  }
+}
+
+.detail{
+  margin-top: 87px;
+  margin-bottom: 15px;
+  &__image{
+    width: 100%;
+  }
+  h2{
+    font-size: 25px;
+    color: #111a6d;
+  }
+  &__content{
+    font-size: 16px;
+  }
+  
+}

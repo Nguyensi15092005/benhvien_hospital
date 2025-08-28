@@ -1,0 +1,73 @@
+
+.header{
+  display: flex;
+  background-color: #0a488a;
+  
+  &__logo{
+    display: flex;
+    width:260px;
+    justify-content: center;
+    align-items: center;
+    border-right:1px solid #ddd;
+    // background-color: #505050;
+    padding: 6px 0;
+    transition: all 0.2s;
+    img{
+      width: 180px;
+      height: 60px;
+      object-fit: cover;
+    }
+  }
+  &__logo-collapsed{
+    width: 80px;
+    transition: all 0.3s;
+  }
+
+
+  &__nav{
+    flex: 1;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &--collapsed{
+      font-size: 25px;
+      color: #fff;
+      font-weight: 500;
+    }
+    &--user{
+      .account{
+        padding: 5px 10px;
+        font-size: 16px;
+      }
+      .account svg{
+        margin-right: 5px;
+      }
+    }
+  }
+
+  
+}
+.sidebar{
+  width: 259px;
+  height: 100%;
+  background-color: #1a76d1;
+  border-right:1px solid #ddd ;
+  .ant-menu-item{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 10px 0;
+  } 
+  .ant-menu-item-selected{
+    background-color: #a2a2a2;
+  }
+}
+
+.layoutAdmin{
+  &__content{
+    padding: 15px;
+  }
+}
+
+

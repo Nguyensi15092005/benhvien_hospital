@@ -1,0 +1,538 @@
+.container{
+  max-width: 1200px;
+  margin: auto;
+}
+ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.layout{
+  //header
+  &__header{
+    &--container{
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(to bottom, #0d2d52, rgb(49, 49, 247));
+      position: fixed;
+      z-index: 999;
+      border-radius: 50px;
+      position: fixed;
+      z-index: 999;
+      width: 100%;
+      top:0;
+      left: 0;
+      right: 0;
+     
+    }
+
+    &--logo{
+      display: flex;
+      align-items: center;
+      img{
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+      span{
+        color: #fff;
+        font-size: 22px;
+        font-weight: 600;
+        margin-left: 10px;
+      }
+    }
+
+    &--menu{
+      display: flex;
+      justify-content: space-around;
+      a{
+        padding: 20px;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 500;
+      }
+      a:hover{
+        color: #4d97ec;
+      }
+      // a.active{
+      //   color: #fff
+      // }
+    }
+    &--dndk{
+      display: flex;
+      justify-content: end;
+      button{
+        margin-left: 10px;
+        font-size: 17px;
+        font-weight: 500;
+      }
+    }   
+  }
+  // end header
+}
+
+  //main
+.main{
+  &__banner{
+    margin-top: 85px;
+    div{
+      width: 100%;
+    }
+    img{
+      width: 100%;
+      height: 600px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+
+  // box-item
+  &__box{
+    display: flex;
+    justify-content: space-around;
+    &--item{
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 10px;
+      margin-top: -60px;
+      position: relative;
+      z-index: 2;
+      box-shadow:
+        -3px 3px 6px rgba(0, 0, 0, 0.1),
+        3px 3px 6px rgba(0, 0, 0, 0.1);
+      .item-icon{
+        text-align: center;
+        font-size: 30px;
+        margin-top: 10px;
+        color: #0d2d52;
+      }
+      h4{
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: 500;
+        text-align: center;
+        color: #0d2d52;
+      }
+      p{
+        text-align: center;
+        color: #0d2d52;
+      }
+
+    }
+    &--item:hover{
+      cursor: pointer;
+      transform: translateY(-10px);
+      transition: all 0.3s;
+    }
+  }
+
+  // listhost
+  &__listhos{
+    margin-top: 40px;
+    &--title{
+      text-align: center;
+      color: rgb(50, 65, 221);
+      font-size: 30px;
+      text-transform: uppercase;
+      margin: 15px 0;
+      font-weight: 600;
+    }
+    &--not{
+      text-align: center;
+      width: 100%;
+      height: 20px;
+      span{
+        width: 80px;
+        display: inline-block;
+        height: 3px;
+        background-color: #ddd;
+        border: 3px solid #b8b6b6;
+      }
+    }
+    &--box{
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+    &--item{
+      padding: 10px;
+      border: 8px solid #ddd;
+      border-radius: 20px 20px 0 20px;
+      text-align: center;
+      img{
+        width: 80px;
+        height: 80px;
+      }
+      .content{
+        text-transform: uppercase;
+      }
+    }
+    &--item:hover{
+      border: 8px solid #4d97ec;
+      cursor: pointer;
+    }
+  }
+
+  // BoxEpert Chuyên Gia bác sĩ Giỏi
+  &__boxExpert{
+    margin: 40px 0;
+    &--title{
+      font-size: 30px;
+      font-weight: 600;
+      color: rgb(50, 65, 221);
+      text-transform: uppercase;
+      text-align: center;
+      margin: 15px 0;
+
+    }
+    &--not{
+      text-align: center;
+      width: 100%;
+      height: 20px;
+      span{
+        width: 80px;
+        display: inline-block;
+        height: 3px;
+        background-color: #ddd;
+        border: 3px solid #b8b6b6;
+      }
+    }
+    &--box{
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+    &--item{
+      width: 100px;
+      text-align: center;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.387);
+      padding: 20px;
+      height: 120px;
+      .number{
+        font-size: 30px;
+        color: rgb(50, 65, 221);
+        font-weight: 500;
+      }
+      p{
+        text-transform: uppercase;
+      }
+    }
+    &--button-view{
+      text-align: center;
+      margin-top: 20px;
+      button{
+        padding: 20px;
+        font-size: 18px;
+      }
+    }
+  }
+
+  // device
+  &__device{
+    margin: 20px 0;
+    &--title{
+      font-size: 30px;
+      font-weight: 600;
+      color: rgb(50, 65, 221);
+      text-transform: uppercase;
+      text-align: center;
+      margin: 15px 0;
+    }
+    &--not{
+      text-align: center;
+      width: 100%;
+      height: 20px;
+      span{
+        width: 80px;
+        display: inline-block;
+        height: 3px;
+        background-color: #ddd;
+        border: 3px solid #b8b6b6;
+      }
+    }
+    &--content{
+      text-align: center;
+      font-size: 18px;
+    }
+    &--item{
+      position: relative;
+      height: 270px;
+      .content{
+        padding: 10px;
+        position: absolute;
+        top:0;
+        display: none;
+        background-color: #0e30d89a;
+        margin-right: 5px;
+        height: 93%;
+        margin-bottom: 5px;
+        overflow: hidden;
+        color: #fff;
+        pointer-events: none;
+
+        h6, p, a {
+          pointer-events: auto;
+        }
+      }
+      .image{
+        width: 100%;
+        height: 100%;
+      }
+      img{
+        width: 100%;
+        height: 100%;
+
+      }
+      h6{
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 500;
+        margin: 0;
+      }
+      p{
+        font-size: 17px;
+      }
+    }
+    &--item:hover .content{
+      display: block;
+      transition: all 0.4s;
+      cursor: pointer;
+    }
+  }
+
+
+  // Chuyên khoa
+  &__chuyenkhoa{
+    margin: 40px 0;
+    &--title{
+      font-size: 30px;
+      font-weight: 600;
+      color: rgb(50, 65, 221);
+      text-transform: uppercase;
+      text-align: center;
+      margin: 15px 0;
+    }
+    &--not{
+      text-align: center;
+      width: 100%;
+      height: 20px;
+      margin-bottom: 20px;
+      span{
+        width: 80px;
+        display: inline-block;
+        height: 3px;
+        background-color: #ddd;
+        border: 3px solid #b8b6b6;
+      }
+    }
+    &--item{
+      text-align: center;
+      height: 150px;
+      background-color: #f2f0f0;
+      padding: 20px 0;
+      margin: 0 5px;
+      border: 3px solid #fff;
+    }
+    &--item-icon{
+      border: 5px solid #1692E3;
+      max-width: 80px;
+      margin: auto;
+      height: 80px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      img{
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+      }
+
+    }
+    &--item:hover &--item-icon{
+      transition: all 0.1s;
+      max-width: 90px;
+      height: 90px;
+    }
+    &--item-content{
+      margin-top:18px ;
+      text-transform: uppercase;
+      font-size: 18px;
+      color: #1692E3;
+    }
+  }
+}
+
+
+.footer{
+  &__container{
+    border-radius: 10px 10px 0 0;
+    background: linear-gradient(to bottom, rgb(49, 49, 247), #0d2d52);
+  }
+  &__introduce{
+    &--title{
+      text-align: center;
+      font-size: 20px;
+      font-weight: 600;
+      padding: 15px;
+      color: #fff;
+    }
+    &--content{
+      padding: 0 15px;
+      color: #fff;
+      p{
+        font-size: 17px;
+        margin: 0;
+        margin-bottom: 5px;
+      }
+    }
+  }
+  &__chinhsach{
+    &--title{
+      text-align: center;
+      font-size: 20px;
+      font-weight: 600;
+      padding: 15px;
+      color: #fff;
+    }
+    ul li{
+      text-align: center;
+      cursor: pointer;
+      font-size: 18px;
+      padding: 7px 0;
+    }
+    a{
+      color: #fff;
+    }
+  }
+  &__lienket{
+    &--title{
+      text-align: center;
+      font-size: 20px;
+      font-weight: 600;
+      padding: 15px;
+      color: #fff;
+    }
+    ul li{
+      text-align: center;
+      cursor: pointer;
+      font-size: 18px;
+      padding: 7px 0;
+    }
+    a{
+      color: #fff;
+    }
+  }
+  &__lienhe{
+    &--title{
+      text-align: center;
+      font-size: 20px;
+      font-weight: 600;
+      padding: 15px;
+      color: #fff;
+    }
+    ul li{
+      font-size: 17px;
+      padding: 5px 0;
+      color: #fff;
+    }
+    svg{
+      color: #1066ef;
+    }
+  }
+
+  &__mangxahoi{
+    margin-top: 15px;
+    ul{
+      display: flex;
+      justify-content: center;
+
+    }
+    li a{
+      padding: 15px;
+      font-size: 30px;
+    }
+    li a:hover{
+      color: #fff;
+    }
+  }
+  &__copyright{
+    background-color: #0d2d52;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    padding: 10px ;
+  }
+}
+
+
+// Modal Khám bệnh
+.modalkb{
+  color: #0d2d52;
+  &__title{
+    font-size: 23px;
+    text-align: center;
+    color: #0e4eb7;
+  }
+  &__title-content{
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  label{
+    color: #0d2d52;
+  }
+  &__radio{
+    span{
+      display: flex;
+      font-size: 16px;
+      align-items: center;
+    }
+    svg{
+      margin-right: 3px;
+      font-size: 18px;
+    }
+    
+  }
+  &__button{
+    .ant-col{
+      margin: 0;
+    }
+    button{
+      width: 100%;
+
+      margin: 0;
+      padding: 20px;
+      font-size: 18px;
+    }
+  }
+  &__button-modal{
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    padding: 6px 15px;
+    border-radius: 10px;
+    border: 0;
+    background-color: rgba(17, 17, 95, 0.325);
+    box-shadow: 0 0 5px #fff;
+  }
+  &__button-modal:hover{
+    cursor: pointer;
+    background-color: #FFF;
+    color: #0e4eb7;
+    box-shadow: 0 0 5px #fff;
+    
+
+  }
+}
+.nav-button-datlich{
+  display: flex;
+  justify-content: end;
+  padding-right: 30px;
+}
+
+
+

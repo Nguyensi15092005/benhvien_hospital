@@ -1,0 +1,35 @@
+.phanquyen{
+  &__alert{
+    text-align: center;
+    padding: 20px; 
+    margin: 10px 0;
+    font-size: 25px;
+    font-weight: 600;
+    color: #0d2d52;
+  }
+  &__button-create{
+    padding: 5px 20px;
+    font-weight: 500;
+  }
+
+
+  &__table{
+    width: 100%;
+    tr th,td{
+      width: 25%;
+      padding: 8px;
+      font-size: 17px;
+    }
+    .end{
+      text-align:left;
+
+    }
+    .center{
+      text-align: center;
+    }
+    input{
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
