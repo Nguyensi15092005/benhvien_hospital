@@ -1,7 +1,7 @@
 import { get } from "../../utils/admin/request"
 
 export const getlistDashboard = async () => {
-    const result = await get("/");
+    const result = await get("");
     return result;
 }
 export const getThongKeBieuDo = async () => {
