@@ -5,6 +5,7 @@ import { postLogin } from "../../../services/admin/account.service";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { getRoleId } from "../../../services/admin/role.service";
+import { setCookie } from "../../../helpers/cookie";
 
 function LoginAdmin() {
   const dispatch = useDispatch();
@@ -19,6 +20,8 @@ function LoginAdmin() {
     };
     const res = await postLogin(option);
     if (res.code === 200) {
+      setCookie("tokenAdmin", res.tokenAdmin, 1);
+      setCookie("accountName", res.accountName, 1)
       dispatch(setLoginAdmin(true));
       const resPermission = await getRoleId(res.role_id);
       if(resPermission){
