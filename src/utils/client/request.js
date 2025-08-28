@@ -1,4 +1,4 @@
-const API_DOMAIN = "https://hospital-be-ufyn.vercel.app/api/";
+const API_DOMAIN = "https://hospital-be-ufyn.vercel.app/api";
 
 export const get = async (path) => {
     try {
