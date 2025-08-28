@@ -21,8 +21,8 @@ function LoginAdmin() {
     const res = await postLogin(option);
     if (res.code === 200) {
       setCookie("tokenAdmin", res.tokenAdmin, 1);
-      setCookie("accountName", res.accountName, 1)
-      dispatch(setLoginAdmin(true));
+      setCookie("accountName", res.accountName, 1);
+      // dispatch(setLoginAdmin(true));
       const resPermission = await getRoleId(res.role_id);
       if(resPermission){
         localStorage.setItem("permission", JSON.stringify(resPermission.permission));
