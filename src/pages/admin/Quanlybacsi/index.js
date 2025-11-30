@@ -18,7 +18,7 @@ function QuanLyBacSi() {
   const fetchAPI = async () => {
     const res = await getDSbacsi();
     if (res) {
-      setDatabs(res.bacsi.reverse());
+      setDatabs(res.bacsi);
     }
   }
   useEffect(() => {

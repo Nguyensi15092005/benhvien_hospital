@@ -1,4 +1,6 @@
 const API_DOMAIN = "https://hospital-be-ufyn.vercel.app/api/";
+// const API_DOMAIN = "http://localhost:3006/api/";
+
 
 export const get = async (path) => {
     try {

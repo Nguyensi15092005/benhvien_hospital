@@ -3,7 +3,7 @@ import { useState } from "react";
 import { FaRegIdCard } from "react-icons/fa";
 import { SelectBacSiId, SelectKhoaId } from "../../../helpers/select";
 import { RiVipFill } from "react-icons/ri";
-import { postLichKham } from "../../../services/admin/lichkham.service";
+import { postLichKham } from "../../../services/client/lichkham.service";
 
 
 const { TextArea } = Input;

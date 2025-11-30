@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Select } from 'antd';
-import { getListKhoa } from '../services/admin/khoa.Service';
+import { getListKhoa } from '../services/client/khoa.service';
 import { getListNhomQuyen } from '../services/admin/NhomQuyen.service';
 import { getListBSKhoaId } from '../services/client/bacsi.sevice';
 
@@ -11,7 +11,7 @@ export const SelectKhoaId = ({ value, onChange }) => {
     const fetchAPI = async () => {
       const res = await getListKhoa();
       if (res) {
-        setKhoa(res.khoa);
+        setKhoa(res);
       }
     }
     fetchAPI();

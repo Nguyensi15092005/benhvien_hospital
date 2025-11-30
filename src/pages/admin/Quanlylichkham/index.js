@@ -33,7 +33,8 @@ function LichKham() {
 
   const handleChanStatus = async (id, status) => {
     const res = await pacthStatus(id, status);
-    if (res) {
+    console.log(id, status)
+    if (res.code === 200) {
       fetchAPI();
       messageApi.success("Thay đổi trạng thái thành công");
     }

@@ -12,6 +12,8 @@ function LoginAdmin() {
   const navigate = useNavigate();
   const [messageApi, contextHolder] = message.useMessage()
 
+  // console.log("chayj vao day");
+
   const handleFinish = async (value) => {
     const option = {
       name: value.name,
@@ -20,9 +22,10 @@ function LoginAdmin() {
     };
     const res = await postLogin(option);
     if (res.code === 200) {
+      console.log("chayj vao day");
       setCookie("tokenAdmin", res.tokenAdmin, 1);
       setCookie("accountName", res.accountName, 1);
-      // dispatch(setLoginAdmin(true));
+      dispatch(setLoginAdmin(true));
       const resPermission = await getRoleId(res.role_id);
       if(resPermission){
         localStorage.setItem("permission", JSON.stringify(resPermission.permission));
