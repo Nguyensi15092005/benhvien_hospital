@@ -4,16 +4,20 @@ import { FaRegIdCard } from "react-icons/fa";
 import { SelectBacSiId, SelectKhoaId } from "../../../helpers/select";
 import { RiVipFill } from "react-icons/ri";
 import { postLichKham } from "../../../services/client/lichkham.service";
+import { getCookie } from "../../../helpers/cookie";
+import { useNavigate } from "react-router-dom";
 
 
 const { TextArea } = Input;
 function ButtonModal() {
+  const navigate = useNavigate();
   const [khoaId, setKhoaId] = useState();
   const [form] = Form.useForm();
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(true);
   const [messageNotifi, contextHolder] = notification.useNotification();
 
+  const token = getCookie("tokenUser");
   const openNotification = (placement) => {
     messageNotifi.success({
       message: "Thành công",
@@ -21,11 +25,27 @@ function ButtonModal() {
       placement,
     });
   };
+  const openNotificationError = (placement) => {
+    messageNotifi.error({
+      message: "Vui lòng đăng nhập tài khoản để có thể đặt lịch",
+      description: "Chúng tôi sẻ đưa bạn đến trang đăng nhập",
+      placement,
+    });
+  };
   const handleSubmit = async (value) => {
+    if(!token){
+      openNotificationError('top');
+      setTimeout(()=>{
+        navigate("/dang-nhap");
+      }, 5000)
+      return;
+    }
+    value.token = token;
     value.examination_date = value.examination_date.toISOString();// "2025-08-05T07:30:00.000Z"
     value.dateBirth = value.dateBirth.toISOString();
     const res = await postLichKham(value);
-    if (res) {
+
+    if (res.code === 200) {
       form.resetFields();
       openNotification('top');
     }

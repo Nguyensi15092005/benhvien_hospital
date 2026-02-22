@@ -37,7 +37,7 @@ function LoginAdmin() {
     }
   }
   return (
-    <>
+    <div className="RootLoginAdmin">
       {contextHolder}
       <Row justify="center">
         <Col xl={10} lg={14} sm={20} xs={22} className="login">
@@ -66,7 +66,7 @@ function LoginAdmin() {
           </Row>
         </Col>
       </Row>
-    </>
+    </div>
   )
 }
 export default LoginAdmin;

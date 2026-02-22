@@ -6,3 +6,12 @@ export const loginAdminReducer = (state = false, action) => {
             return state;
     }
 }
+
+export const loginUserReducer = (state = false, action) => {
+    switch (action.type){
+        case "CHECK_LOGIN_USER": 
+            return action;
+        default:
+            return state;
+    }
+}

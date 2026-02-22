@@ -39,6 +39,7 @@ import TinTucSuKien from "../pages/client/TintucSukien";
 import ChiTietTinTuc from "../pages/client/TintucSukien/detail";
 import ChuyenGia from "../pages/client/chuyengia";
 import PhanQuyen from "../pages/admin/QuanlyPhanquyen";
+import Auth from "../pages/client/Auth/index";
 
 const permission = JSON.parse(localStorage.getItem("permission") || "[]");
 
@@ -79,6 +80,10 @@ export const routes = [
                 element: <ChuyenGia />
             },
         ]
+    },
+    {
+        path: "/dang-nhap",
+        element: <Auth />
     },
 
     {

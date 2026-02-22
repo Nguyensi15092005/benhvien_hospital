@@ -18,6 +18,7 @@ function Home() {
     };
     fetchAPI();
   }, [])
+ 
 
   return (
     <>

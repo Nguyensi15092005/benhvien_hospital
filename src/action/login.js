@@ -4,3 +4,10 @@ export const setLoginAdmin = (status) => {
         status: status
     }
 }
+
+export const setLoginUser = (status) => {
+    return {
+        type: "CHECK_LOGIN_USER",
+        status: status
+    }
+}

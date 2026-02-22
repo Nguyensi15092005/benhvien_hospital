@@ -118,6 +118,7 @@ ul{
       p{
         text-align: center;
         color: #0d2d52;
+        height: 67px;
       }
 
     }
@@ -508,7 +509,29 @@ ul{
       padding: 20px;
       font-size: 18px;
     }
+
   }
+  &__outLogin{
+    text-align: center;
+    p{
+      font-size: 18px;
+
+    }
+    &--button{
+      background-color: #1066ef;
+      color: #fff;
+      border-radius: 10px;
+      padding: 7px 15px;
+      font-size: 18px;
+    }
+    &--button:hover{
+      transition: all 0.2s;
+      background-color: #fff;
+      border: 2px solid #0D47A1;
+      color: #0D47A1;
+    }
+  }
+
   &__button-modal{
     font-size: 18px;
     font-weight: 600;
@@ -518,6 +541,7 @@ ul{
     border: 0;
     background-color: rgba(17, 17, 95, 0.325);
     box-shadow: 0 0 5px #fff;
+    margin-right: 10px;
   }
   &__button-modal:hover{
     cursor: pointer;
@@ -531,7 +555,61 @@ ul{
 .nav-button-datlich{
   display: flex;
   justify-content: end;
-  padding-right: 30px;
+  padding-right: 10px;
+}
+
+
+// tagInfo
+.tagInfo{
+  font-size: 18px;
+  color: #0D47A1;
+  background-color: #E3F2FD;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  &__iconUser{
+    width: 20px;
+    height: 20px;
+  }
+  &__icondrop{
+    width: 30px;
+    height: 30px;
+  }
+  &__menu{
+    display: none;
+    position: absolute;
+    top: 34px;
+    background-color: #E3F2FD;
+    padding: 5px 15px;
+    width: 146px;
+    left: 0;
+    z-index: 99;
+    border-radius: 8px;
+    opacity: 0;
+    &--logout{
+      display: flex;
+      align-items: center;
+      svg{
+        margin-left: 5px;
+      }
+    }
+  }
+  &__menushow{
+    animation: show 0.2s forwards;
+  }
+  @keyframes show {
+    0%{
+      height: 0px;
+      opacity: 0;
+    }
+    100%{
+      height: 28px;
+      opacity: 1;
+    }
+  }
 }
 
 
